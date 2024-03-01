@@ -96,27 +96,69 @@ namespace HelloWorldCS
 ## 11. 方法
 
 ## 12. 调试
+**F5 F10 F11**
 
 ## 13. 错误处理
+try{
+
+}
+catch{
+
+}
 
 ## 14. 面向对象
 
 ## 15. Static
 
 ## 16. 代码抽离
-**新建类库**->可以给.NET core framework用->build会生成.dll文件(右键属性可以改)
+**新建类库**->可以给.NET core framework用->build会生成.dll文件(右键属性可以改BUILD生成类型)
 
 class必须是public
 
 想要引用的话 add reference， 然后using...就行了
 ```
-.dll 文件指的是动态链接库（Dynamic Link Library）文件。 这些文件包含可被程序在运行时调用的代码和数据。 它们是Windows操作系统中重要的组成部分，允许程序共享资源，提高效率并降低重复编码的需要。 .dll 文件允许程序模块化，以便多个应用程序可以共享它们，这样便于维护和更新
+.dll 文件指的是动态链接库（Dynamic Link Library）文件。
+这些文件包含可被程序在运行时调用的代码和数据。 它们是Windows操作系统中重要的组成部分，允许程序共享资源，提高效率并降低重复编码的需要。
+.dll 文件允许程序模块化，以便多个应用程序可以共享它们，这样便于维护和更新
 ```
 注意：引用.dll之后，单独exe就不能直接打开用了；必须配上dll
 
-.dll的集合平台--NuGet
+**.dll的集合平台--NuGet**
 
 
 ## 17. 文件操作
+```
+using System;
+using System.IO;
+
+namespace changeFiles
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            String path = @"D:\SENECA\semester 5 winter24\APD545 NAA Mahboob Ali马布·阿里\APD Workshops";
+
+            //第一种方法
+            var files = Directory.GetFiles(path, "*.txt"); //返回一个数组
+
+            foreach (var file in files)
+                Console.WriteLine(file);
+
+            //第二种方法
+            DirectoryInfo folder = new DirectoryInfo(path);
+
+            foreach (FileInfo file in folder.GetFiles("*.txt"))
+            {
+                Console.WriteLine(file.FullName);
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
+
+```
 
 ## 18. 总结

@@ -104,6 +104,18 @@ namespace HelloWorldCS
 ## 15. Static
 
 ## 16. 代码抽离
+**新建类库**->可以给.NET core framework用->build会生成.dll文件(右键属性可以改)
+
+class必须是public
+
+想要引用的话 add reference， 然后using...就行了
+```
+.dll 文件指的是动态链接库（Dynamic Link Library）文件。 这些文件包含可被程序在运行时调用的代码和数据。 它们是Windows操作系统中重要的组成部分，允许程序共享资源，提高效率并降低重复编码的需要。 .dll 文件允许程序模块化，以便多个应用程序可以共享它们，这样便于维护和更新
+```
+注意：引用.dll之后，单独exe就不能直接打开用了；必须配上dll
+
+.dll的集合平台--NuGet
+
 
 ## 17. 文件操作
 

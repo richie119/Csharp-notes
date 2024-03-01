@@ -165,3 +165,5 @@ namespace changeFiles
 多看微软技术文档
 
 创建窗体应用 https://learn.microsoft.com/zh-cn/visualstudio/ide/create-csharp-winform-visual-studio?view=vs-2022
+
+数据注释最初作为System. ComponentModel. DataAnnotations命名空间的一部分而引入到.NET 3.5中。此后，它已成为.NET中一种广泛使用的功能。你可以充分利用数据注释在单单一处定义数据验证规则，因而没必要一再重写同样的验证代码
